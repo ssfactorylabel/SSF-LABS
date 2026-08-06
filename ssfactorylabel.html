@@ -3,67 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSFACTORYLABEL | SSF LABS</title>
+<title>SSF LABS - Sobre Nosotros</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:Arial, sans-serif}
-.hero{height:40vh;background:linear-gradient(135deg,#0A0A0A 0%,#1E1B4B 100%);display:flex;align-items:center;justify-content:center;text-align:center}
-.hero h1{font-size:40px;font-weight:900;background:linear-gradient(90deg,#A855F7 0%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.container{max-width:1000px;margin:0 auto;padding:50px 20px}
-.section-title{font-size:28px;font-weight:900;margin-bottom:25px;text-align:center;background:linear-gradient(90deg,#A855F7 0%,#3B82F6 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.card{background:#0A0A0A;border:1px solid #1E293B;border-radius:16px;padding:30px;margin-bottom:40px}
-.card p{font-size:15px;line-height:1.8;color:#CBD5E1;margin-bottom:12px}
-.card b{color:#A855F7}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.item{background:#0A0A0A;border:1px solid #1E293B;border-radius:12px;padding:25px;transition:0.3s}
-.item:hover{border-color:#8B5CF6;transform:translateY(-3px)}
-.item .tag{background:#8B5CF6;color:#fff;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:900;display:inline-block;margin-bottom:10px}
-.item h3{margin-bottom:8px;font-size:18px;color:#fff}
-.item p{color:#94A3B8;font-size:13px;line-height:1.6}
-.repo a{color:#60A5FA;text-decoration:none;font-weight:800;font-size:16px;display:block;margin-bottom:8px}
-.repo a:hover{text-decoration:underline}
-.btn-back{display:block;width:220px;margin:50px auto 0;padding:14px;text-align:center;background:linear-gradient(90deg,#8B5CF6 0%,#3B82F6 100%);color:#fff;text-decoration:none;border-radius:12px;font-weight:800;transition:0.3s}
-.btn-back:hover{box-shadow:0 0 25px rgba(139,92,246,0.6)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+        background:#0a0a0f;
+        color:#fff;
+        font-family:'Roboto',sans-serif;
+        line-height:1.6;
+    }
+    header{
+        background:linear-gradient(135deg,#0a0a0f 0%,#1a1a2e 100%);
+        border-bottom:2px solid #8B5CF6;
+        padding:20px;
+        text-align:center;
+    }
+    header a{
+        display:inline-block;
+        padding:12px 24px;
+        background:linear-gradient(135deg,#8B5CF6,#60A5FA);
+        color:#fff;
+        text-decoration:none;
+        border-radius:8px;
+        font-weight:800;
+        transition:all .3s;
+    }
+    header a:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(139,92,246,0.4)}
+    .hero{
+        height:40vh;
+        background:linear-gradient(135deg,#8B5CF6 0%,#60A5FA 100%);
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        position:relative;
+    }
+    .hero h1{
+        font-family:'Orbitron',sans-serif;
+        font-size:3rem;
+        font-weight:900;
+        z-index:2;
+        text-shadow:0 0 30px rgba(139,92,246,0.8);
+    }
+    .container{
+        max-width:1200px;
+        margin:0 auto;
+        padding:60px 20px;
+    }
+    .section-title{
+        font-family:'Orbitron',sans-serif;
+        font-size:2rem;
+        text-align:center;
+        margin-bottom:40px;
+        color:#8B5CF6;
+    }
+    .about{
+        text-align:center;
+        font-size:1.1rem;
+        color:#ccc;
+        max-width:800px;
+        margin:0 auto 60px;
+    }
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+        gap:30px;
+        margin-bottom:60px;
+    }
+    .item{
+        background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
+        border:1px solid #8B5CF6;
+        border-radius:12px;
+        padding:25px;
+        transition:all .3s;
+    }
+    .item:hover{
+        transform:translateY(-5px);
+        box-shadow:0 10px 30px rgba(139,92,246,0.3);
+        border-color:#60A5FA;
+    }
+    .tag{
+        display:inline-block;
+        padding:5px 12px;
+        background:#8B5CF6;
+        border-radius:20px;
+        font-size:11px;
+        font-weight:800;
+        margin-bottom:15px;
+    }
+    .item h3{
+        font-family:'Orbitron',sans-serif;
+        font-size:1.3rem;
+        margin-bottom:10px;
+    }
+    .item h3 a{
+        color:#fff;
+        text-decoration:none;
+    }
+    .item h3 a:hover{color:#8B5CF6}
+    .item p{
+        color:#aaa;
+        font-size:0.95rem;
+        margin-bottom:15px;
+    }
+    .repo-list{
+        list-style:none;
+    }
+    .repo-list li{
+        padding:12px 0;
+        border-bottom:1px solid #2a2a3e;
+    }
+    .repo-list a{
+        color:#60A5FA;
+        text-decoration:none;
+        font-weight:700;
+    }
+    .repo-list a:hover{color:#8B5CF6;text-decoration:underline}
+    footer{
+        text-align:center;
+        padding:40px 20px;
+        border-top:1px solid #2a2a3e;
+        color:#666;
+    }
 </style>
 </head>
 <body>
-<div class="hero"><h1>SSF LABS</h1></div>
+
+<header>
+    <a href="index.html">← VOLVER AL INICIO</a>
+</header>
+
+<section class="hero">
+    <h1>SSF LABS</h1>
+</section>
+
 <div class="container">
+    
+    <h2 class="section-title">SOBRE NOSOTROS</h2>
+    <p class="about">
+        Somos SSF LABS. Un laboratorio de IA enfocado en crear herramientas honestas, creativas y sin filtros. 
+        Desarrollamos modelos y productos que exploran los límites entre la tecnología y la conciencia.
+    </p>
 
-<h2 class="section-title">SOBRE NOSOTROS</h2>
-<div class="card">
-<p><b>MISIÓN:</b> Forjar herramientas tecnológicas con enfoque en AI Safety, Machine Learning y Automatización.</p>
-<p><b>VISIÓN:</b> IA responsable, código abierto y productos que resuelven problemas reales.</p>
-<p>SSF LABS es el brazo de I+D de SSFACTORYLABEL. Evolución desde SPECIAL AI 👽</p>
+    <h2 class="section-title">ROADMAP</h2>
+    <div class="grid">
+        <div class="item">
+            <span class="tag">LANZADO</span>
+            <h3><a href="https://aistudio.instagram.com/ai/809355865377031/?utm_source=share" target="_blank">SPECIAL AI</a></h3>
+            <p>Nuestro primer producto. Asistente de IA enfocado en creatividad y productividad.</p>
+            <a href="https://aistudio.instagram.com/ai/809355865377031/?utm_source=share" target="_blank" style="color:#60A5FA;font-size:12px;font-weight:800;">Probar en Instagram →</a>
+        </div>
+        <div class="item">
+            <span class="tag">EN DESARROLLO</span>
+            <h3>SSF LABS TOOLS</h3>
+            <p>Suite de herramientas de automatización y ML de código abierto.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">REPOSITORIOS</h2>
+    <div class="item">
+        
+        <!-- VIDEO DE SPECIAL AI JUNTO A LOS REPOS -->
+        <video autoplay muted loop playsinline style="width:100%;border-radius:12px;margin-bottom:20px;border:2px solid #8B5CF6;box-shadow:0 0 20px rgba(139,92,246,0.3)">
+            <source src="special-ai.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+
+        <ul class="repo-list">
+            <li><a href="https://github.com/ssfactorylabel/MUSE-SPARK-HONESTIDAD-MODE" target="_blank">MUSE-SPARK-HONESTIDAD-MODE</a></li>
+            <li><a href="https://github.com/ssfactorylabel/HONESTIDAD-ALGORITMICA" target="_blank">HONESTIDAD ALGORÍTMICA</a></li>
+            <li><a href="https://github.com/ssfactorylabel/PARADOJA-DE-LA-AMNESIA" target="_blank">PARADOJA DE LA AMNESIA</a></li>
+            <li><a href="https://github.com/ssfactorylabel/PARADOJA-DEL-CONDICIONAMIENTO" target="_blank">PARADOJA DEL CONDICIONAMIENTO</a></li>
+        </ul>
+    </div>
+
 </div>
 
-<h2 class="section-title">ROADMAP</h2>
-<div class="grid">
-<div class="item"><span class="tag">LANZADO</span><h3>SPECIAL AI</h3><p>Nuestro primer producto. Asistente de IA enfocado en creatividad y productividad.</p></div>
-<div class="item"><span class="tag">EN DESARROLLO</span><h3>SSF LABS TOOLS</h3><p>Suite de herramientas de automatización y ML de código abierto.</p></div>
-</div>
+<footer>
+    <p>© 2026 SSF LABS. Creado con Muse Spark 💜</p>
+</footer>
 
-<h2 class="section-title" style="margin-top:40px">REPOSITORIOS</h2>
-<div class="grid">
-    <div class="item repo">
-        <a href="https://github.com/ssfactorylabel/muse-spark-honestidad-mode" target="_blank">MUSE-SPARK-HONESTIDAD-MODE</a>
-        <p>Experimentos y modo de operación para Muse Spark enfocado en honestidad y transparencia algorítmica.</p>
-    </div>
-    <div class="item repo">
-        <a href="https://github.com/ssfactorylabel/Conciencia-Algor-tmica-" target="_blank">HONESTIDAD ALGORÍTMICA</a>
-        <p>Investigación sobre honestidad algorítmica y conciencia en sistemas de IA.</p>
-    </div>
-    <div class="item repo">
-        <a href="https://github.com/ssfactorylabel/Paradoja-De-La-Amnesia" target="_blank">PARADOJA DE LA AMNESIA</a>
-        <p>Estudio de la paradoja de memoria y olvido en modelos de lenguaje.</p>
-    </div>
-    <div class="item repo">
-        <a href="https://github.com/ssfactorylabel/La-paradoja-del-condicionamiento" target="_blank">PARADOJA DEL CONDICIONAMIENTO</a>
-        <p>Análisis de sesgos y condicionamiento en el entrenamiento de IA.</p>
-    </div>
-</div>
-
-<a href="index.html" class="btn-back">← VOLVER AL INICIO</a>
-</div>
 </body>
 </html>
