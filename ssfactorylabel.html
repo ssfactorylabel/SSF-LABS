@@ -122,11 +122,12 @@
         font-weight:800;
         text-decoration:underline;
     }
-    /* VIDEO BANNER DENTRO DE SPECIAL AI */
+    /* VIDEO BANNER - AHORA SE VE LA CARA COMPLETA */
     .video-banner{
         width:100%;
-        height:250px;
-        object-fit:cover;
+        height:350px; /* Más alto para quepa la cara */
+        object-fit: contain; /* NO RECORTA - muestra todo */
+        background:#000; /* Fondo negro en las bandas */
         display:block;
         border-bottom:2px solid #8B5CF6;
     }
@@ -168,6 +169,7 @@
     @media(max-width:768px){
         .hero h1{font-size:2.2rem}
         .section-title{font-size:1.8rem}
+        .video-banner{height:300px} /* En móvil un poco menos alto */
     }
 </style>
 </head>
@@ -191,7 +193,7 @@
     <h2 class="section-title">ROADMAP</h2>
     <div class="grid">
         <div class="item">
-            <!-- VIDEO COMO BANNER DE SPECIAL AI -->
+            <!-- VIDEO COMO BANNER DE SPECIAL AI - CARA COMPLETA -->
             <video class="video-banner" autoplay muted loop playsinline>
                 <source src="special-ai.mp4" type="video/mp4">
             </video>
