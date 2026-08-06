@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSFACTORYLABEL | SSF LABS</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            background:#000;
+            color:#fff;
+            font-family:Arial, sans-serif;
+        }
+        .hero{
+            height:50vh;
+            background: url('/mnt/data/wa_image_8238276305819322686') center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            position:relative;
+        }
+        .hero::after{
+            content:'';
+            position:absolute;
+            top:0;left:0;width:100%;height:100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 100%);
+        }
+        .hero h1{
+            position:relative;
+            z-index:2;
+            font-size:40px;
+            font-weight:900;
+            background: linear-gradient(90deg, #A855F7 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .container{max-width:1000px;margin:0 auto;padding:50px 20px}
+        .section-title{
+            font-size:28px;
+            font-weight:900;
+            margin-bottom:25px;
+            text-align:center;
+            background: linear-gradient(90deg, #A855F7 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card{background:#0A0A0A;border:1px solid #1E293B;border-radius:16px;padding:30px;margin-bottom:40px}
+        .card p{font-size:15px;line-height:1.8;color:#CBD5E1;margin-bottom:12px}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:20px}
+        .item{background:#0A0A0A;border:1px solid #1E293B;border-radius:12px;padding:25px}
+        .item .tag{background:#8B5CF6;color:#fff;padding:4px 10px;border-radius:20px;font-size:10px;font-weight:900}
+        .item h3{margin:10px 0;font-size:18px}
+        .item p{color:#94A3B8;font-size:13px}
+        .repo a{color:#60A5FA;text-decoration:none;font-weight:800}
+        .btn-back{display:block;width:220px;margin:50px auto 0;padding:14px;text-align:center;background: linear-gradient(90deg, #8B5CF6 0%, #3B82F6 100%);color:#fff;text-decoration:none;border-radius:12px;font-weight:800}
+    </style>
+</head>
+<body>
+    <div class="hero"><h1>SSF LABS</h1></div>
+    <div class="container">
+        <h2 class="section-title">SOBRE NOSOTROS</h2>
+        <div class="card">
+            <p><b>MISIÓN:</b> Forjar herramientas tecnológicas con enfoque en AI Safety, Machine Learning y Automatización.</p>
+            <p><b>VISIÓN:</b> IA responsable, código abierto y productos que resuelven problemas reales.</p>
+            <p>SSF LABS es el brazo de I+D de SSFACTORYLABEL. Evolución desde SPECIAL AI 👽</p>
+        </div>
+
+        <h2 class="section-title">ROADMAP</h2>
+        <div class="grid">
+            <div class="item">
+                <span class="tag">LANZADO</span>
+                <h3>SPECIAL AI</h3>
+                <p>Nuestro primer producto. Asistente de IA enfocado en creatividad y productividad.</p>
+            </div>
+            <div class="item">
+                <span class="tag">EN DESARROLLO</span>
+                <h3>SSF LABS TOOLS</h3>
+                <p>Suite de herramientas de automatización y ML de código abierto.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top:40px">REPOSITORIOS</h2>
+        <div class="grid">
+            <div class="item repo"><a href="https://github.com/ssfactorylabel/REPO1" target="_blank">REPO 1</a><p>Descripción repo 1</p></div>
+            <div class="item repo"><a href="https://github.com/ssfactorylabel/REPO2" target="_blank">REPO 2</a><p>Descripción repo 2</p></div>
+            <div class="item repo"><a href="https://github.com/ssfactorylabel/REPO3" target="_blank">REPO 3</a><p>Descripción repo 3</p></div>
+            <div class="item repo"><a href="https://github.com/ssfactorylabel/REPO4" target="_blank">REPO 4</a><p>Descripción repo 4</p></div>
+        </div>
+        <a href="index.html" class="btn-back">← VOLVER AL INICIO</a>
+    </div>
+</body>
+</html>
