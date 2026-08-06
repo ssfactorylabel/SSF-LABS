@@ -1,76 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSF LABS</title>
-    <style>
-        body{
-            background:#030712;
-            color:white;
-            font-family:Arial, sans-serif;
-            text-align:center;
-            min-height:100vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            padding:40px 20px;
-            margin:0;
-            background-image: 
-                linear-gradient(rgba(139,92,246,0.08) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        .logo{
-            width:120px;
-            height:120px;
-            margin-bottom:20px;
-            animation:float 3s ease-in-out infinite;
-            border-radius:20px;
-            object-fit:cover;
-        }
-        @keyframes float{
-            0%, 100%{transform:translateY(0px)}
-            50%{transform:translateY(-10px)}
-        }
-        h1{
-            font-size:50px;
-            font-weight:900;
-            margin-bottom:10px;
-            background: linear-gradient(90deg, #A855F7 0%, #3B82F6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing:2px;
-        }
-        .tag{color:#60A5FA;margin-bottom:20px;font-size:14px;font-weight:700;letter-spacing:1px;}
-        p{color:#CBD5E1;margin-bottom:35px;max-width:600px;line-height:1.6;}
-        .btn{
-            display:inline-block;
-            margin:10px;
-            padding:15px 30px;
-            background: linear-gradient(90deg, #8B5CF6 0%, #3B82F6 100%);
-            color:white;
-            text-decoration:none;
-            border-radius:12px;
-            font-weight:800;
-            transition:0.3s;
-        }
-        .btn:hover{transform:translateY(-3px);box-shadow:0 0 25px rgba(139,92,246,0.6);}
-        footer{margin-top:40px;font-size:12px;color:#475569;font-weight:700;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSF LABS</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+        background:#0a0a0f;
+        color:#fff;
+        font-family:'Roboto',sans-serif;
+        min-height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background-image: 
+            linear-gradient(rgba(139,92,246,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(139,92,246,0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+    .container{
+        text-align:center;
+        padding:40px 20px;
+        max-width:600px;
+        width:100%;
+    }
+    
+    /* LOGO COMPLETO - SIN RECORTAR */
+    .logo-container{
+        width:100%;
+        max-width:280px; /* Más grande */
+        margin:0 auto 30px;
+        padding:20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .logo{
+        width:100%;
+        height:auto;
+        object-fit: contain; /* ESTO ES CLAVE: NO RECORTA */
+        display:block;
+        filter: drop-shadow(0 0 30px rgba(139,92,246,0.4));
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float{
+        0%,100%{transform:translateY(0)}
+        50%{transform:translateY(-10px)}
+    }
+    
+    h1{
+        font-family:'Orbitron',sans-serif;
+        font-size:3.5rem;
+        font-weight:900;
+        background:linear-gradient(135deg,#8B5CF6,#60A5FA);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        background-clip:text;
+        margin-bottom:10px;
+        letter-spacing:3px;
+    }
+    .subtitle{
+        font-family:'Orbitron',sans-serif;
+        font-size:0.9rem;
+        font-weight:700;
+        color:#60A5FA;
+        letter-spacing:2px;
+        margin-bottom:25px;
+    }
+    .description{
+        font-size:1.1rem;
+        color:#ccc;
+        line-height:1.7;
+        margin-bottom:40px;
+    }
+    .buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+    .btn{
+        display:inline-block;
+        padding:16px 40px;
+        background:linear-gradient(135deg,#8B5CF6,#60A5FA);
+        color:#fff;
+        text-decoration:none;
+        border-radius:14px;
+        font-weight:800;
+        font-size:16px;
+        transition:all .3s;
+        box-shadow:0 4px 20px rgba(139,92,246,0.3);
+        min-width:280px;
+        font-family:'Orbitron',sans-serif;
+        letter-spacing:1px;
+    }
+    .btn:hover{
+        transform:translateY(-3px);
+        box-shadow:0 8px 30px rgba(139,92,246,0.5);
+    }
+    footer{
+        margin-top:50px;
+        color:#666;
+        font-size:13px;
+        font-family:'Orbitron',sans-serif;
+    }
+    
+    @media(max-width:768px){
+        h1{font-size:2.8rem}
+        .logo-container{max-width:220px}
+        .btn{min-width:240px}
+    }
+</style>
 </head>
 <body>
-    <!-- LOGO CON NOMBRE LARGO -->
-    <img src="BeautyPlus-BG-CHANGER-1783273738276.jpg.png" alt="SSF LABS Logo" class="logo">
-    
+
+<div class="container">
+    <!-- LOGO -->
+    <div class="logo-container">
+        <img src="wa_image_5147599098075993058" alt="SSF LABS Logo" class="logo">
+    </div>
+
     <h1>SSF LABS</h1>
-    <div class="tag">AI SAFETY • MACHINE LEARNING • AUTOMATIZACIÓN</div>
-    <p>Forjando herramientas tecnológicas para impulsar el talento humano.</p>
+    <p class="subtitle">AI SAFETY • MACHINE LEARNING • AUTOMATIZACIÓN</p>
     
-    <a href="https://github.com/ssfactorylabel" class="btn">GITHUB</a>
-    <a href="ssfactorylabel.html" class="btn">SSFACTORYLABEL</a>
-    
-    <footer>EVOLUCIÓN DE SPECIAL AI 👽</footer>
+    <p class="description">
+        Forjando herramientas tecnológicas para impulsar el talento humano.
+    </p>
+
+    <div class="buttons">
+        <a href="https://github.com/ssfactorylabel" target="_blank" class="btn">GITHUB</a>
+        <a href="ssfactorylabel.html" class="btn">SSFACTORYLABEL</a>
+    </div>
+
+    <footer>
+        EVOLUCIÓN DE SPECIAL AI 👽
+    </footer>
+</div>
+
 </body>
 </html>
