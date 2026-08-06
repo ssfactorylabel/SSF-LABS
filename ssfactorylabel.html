@@ -14,87 +14,96 @@
         line-height:1.6;
     }
     header{
-        background:linear-gradient(135deg,#0a0a0f 0%,#1a1a2e 100%);
-        border-bottom:2px solid #8B5CF6;
-        padding:20px;
+        background:#0a0a0f;
+        padding:25px 20px;
         text-align:center;
     }
     header a{
         display:inline-block;
-        padding:12px 24px;
+        padding:14px 32px;
         background:linear-gradient(135deg,#8B5CF6,#60A5FA);
         color:#fff;
         text-decoration:none;
-        border-radius:8px;
+        border-radius:12px;
         font-weight:800;
+        font-size:15px;
         transition:all .3s;
+        box-shadow:0 4px 15px rgba(139,92,246,0.3);
     }
-    header a:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(139,92,246,0.4)}
+    header a:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(139,92,246,0.5)}
     .hero{
         height:40vh;
         background:linear-gradient(135deg,#8B5CF6 0%,#60A5FA 100%);
         display:flex;
         align-items:center;
         justify-content:center;
-        position:relative;
     }
     .hero h1{
         font-family:'Orbitron',sans-serif;
         font-size:3rem;
         font-weight:900;
-        z-index:2;
-        text-shadow:0 0 30px rgba(139,92,246,0.8);
+        color:#fff;
+        letter-spacing:2px;
     }
     .container{
-        max-width:1200px;
+        max-width:900px;
         margin:0 auto;
         padding:60px 20px;
     }
     .section-title{
         font-family:'Orbitron',sans-serif;
-        font-size:2rem;
+        font-size:2.2rem;
         text-align:center;
         margin-bottom:40px;
         color:#8B5CF6;
+        font-weight:900;
+        letter-spacing:1px;
     }
     .about{
         text-align:center;
         font-size:1.1rem;
         color:#ccc;
         max-width:800px;
-        margin:0 auto 60px;
+        margin:0 auto 80px;
+        line-height:1.8;
     }
     .grid{
         display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
         gap:30px;
-        margin-bottom:60px;
+        margin-bottom:80px;
     }
     .item{
-        background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
+        background:#111827;
         border:1px solid #8B5CF6;
-        border-radius:12px;
-        padding:25px;
+        border-radius:16px;
+        padding:0;
         transition:all .3s;
+        overflow:hidden;
     }
     .item:hover{
         transform:translateY(-5px);
-        box-shadow:0 10px 30px rgba(139,92,246,0.3);
+        box-shadow:0 15px 40px rgba(139,92,246,0.25);
         border-color:#60A5FA;
+    }
+    .item-content{
+        padding:25px;
     }
     .tag{
         display:inline-block;
-        padding:5px 12px;
+        padding:8px 16px;
         background:#8B5CF6;
         border-radius:20px;
-        font-size:11px;
+        font-size:12px;
         font-weight:800;
-        margin-bottom:15px;
+        margin-bottom:20px;
+        font-family:'Orbitron',sans-serif;
     }
     .item h3{
         font-family:'Orbitron',sans-serif;
-        font-size:1.3rem;
-        margin-bottom:10px;
+        font-size:1.5rem;
+        margin-bottom:15px;
+        color:#fff;
+        font-weight:900;
     }
     .item h3 a{
         color:#fff;
@@ -103,27 +112,62 @@
     .item h3 a:hover{color:#8B5CF6}
     .item p{
         color:#aaa;
-        font-size:0.95rem;
-        margin-bottom:15px;
+        font-size:1rem;
+        margin-bottom:20px;
+        line-height:1.7;
+    }
+    .item a.link{
+        color:#60A5FA;
+        font-size:14px;
+        font-weight:800;
+        text-decoration:underline;
+    }
+    /* VIDEO BANNER DENTRO DE SPECIAL AI */
+    .video-banner{
+        width:100%;
+        height:250px;
+        object-fit:cover;
+        display:block;
+        border-bottom:2px solid #8B5CF6;
+    }
+    /* REPOS */
+    .repo-box{
+        background:#111827;
+        border:1px solid #8B5CF6;
+        border-radius:16px;
+        padding:25px;
+        box-shadow:0 10px 30px rgba(139,92,246,0.15);
+    }
+    .repo-img{
+        width:100%;
+        border-radius:12px;
+        border:2px solid #8B5CF6;
+        margin-bottom:25px;
     }
     .repo-list{
         list-style:none;
     }
     .repo-list li{
-        padding:12px 0;
-        border-bottom:1px solid #2a2a3e;
+        padding:15px 0;
+        border-bottom:1px solid #1f2937;
     }
+    .repo-list li:last-child{border-bottom:none}
     .repo-list a{
         color:#60A5FA;
         text-decoration:none;
         font-weight:700;
+        font-size:1.05rem;
     }
     .repo-list a:hover{color:#8B5CF6;text-decoration:underline}
     footer{
         text-align:center;
         padding:40px 20px;
-        border-top:1px solid #2a2a3e;
         color:#666;
+        font-size:14px;
+    }
+    @media(max-width:768px){
+        .hero h1{font-size:2.2rem}
+        .section-title{font-size:1.8rem}
     }
 </style>
 </head>
@@ -139,36 +183,40 @@
 
 <div class="container">
     
-    <h2 class="section-title">SOBRE NOSOTROS</h2>
+    <h2 class="section-title">SOBRE<br>NOSOTROS</h2>
     <p class="about">
-        Somos SSF LABS. Un laboratorio de IA enfocado en crear herramientas honestas, creativas y sin filtros. 
-        Desarrollamos modelos y productos que exploran los límites entre la tecnología y la conciencia.
+        Somos SSF LABS. Un laboratorio de IA enfocado en crear herramientas honestas, creativas y sin filtros. Desarrollamos modelos y productos que exploran los límites entre la tecnología y la conciencia.
     </p>
 
     <h2 class="section-title">ROADMAP</h2>
     <div class="grid">
         <div class="item">
-            <span class="tag">LANZADO</span>
-            <h3><a href="https://aistudio.instagram.com/ai/809355865377031/?utm_source=share" target="_blank">SPECIAL AI</a></h3>
-            <p>Nuestro primer producto. Asistente de IA enfocado en creatividad y productividad.</p>
-            <a href="https://aistudio.instagram.com/ai/809355865377031/?utm_source=share" target="_blank" style="color:#60A5FA;font-size:12px;font-weight:800;">Probar en Instagram →</a>
+            <!-- VIDEO COMO BANNER DE SPECIAL AI -->
+            <video class="video-banner" autoplay muted loop playsinline>
+                <source src="special-ai.mp4" type="video/mp4">
+            </video>
+            
+            <div class="item-content">
+                <span class="tag">LANZADO</span>
+                <h3><a href="https://aistudio.instagram.com/ai/809355865377031/?utm_source=share" target="_blank">SPECIAL AI</a></h3>
+                <p>Nuestro primer producto. Asistente de IA enfocado en creatividad y productividad.</p>
+                <a href="https://aistudio.instagram.com/ai/809355865377031/?utm_source=share" target="_blank" class="link">Probar en Instagram →</a>
+            </div>
         </div>
+
         <div class="item">
-            <span class="tag">EN DESARROLLO</span>
-            <h3>SSF LABS TOOLS</h3>
-            <p>Suite de herramientas de automatización y ML de código abierto.</p>
+            <div class="item-content">
+                <span class="tag">EN DESARROLLO</span>
+                <h3>SSF LABS TOOLS</h3>
+                <p>Suite de herramientas de automatización y ML de código abierto.</p>
+            </div>
         </div>
     </div>
 
     <h2 class="section-title">REPOSITORIOS</h2>
-    <div class="item">
+    <div class="repo-box">
+        <img src="wa_image_6893123835216940029_0" class="repo-img" alt="SSF LABS">
         
-        <!-- VIDEO DE SPECIAL AI JUNTO A LOS REPOS -->
-        <video autoplay muted loop playsinline style="width:100%;border-radius:12px;margin-bottom:20px;border:2px solid #8B5CF6;box-shadow:0 0 20px rgba(139,92,246,0.3)">
-            <source src="special-ai.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-        </video>
-
         <ul class="repo-list">
             <li><a href="https://github.com/ssfactorylabel/MUSE-SPARK-HONESTIDAD-MODE" target="_blank">MUSE-SPARK-HONESTIDAD-MODE</a></li>
             <li><a href="https://github.com/ssfactorylabel/HONESTIDAD-ALGORITMICA" target="_blank">HONESTIDAD ALGORÍTMICA</a></li>
