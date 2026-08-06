@@ -8,35 +8,78 @@
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap');
         
         *{margin:0;padding:0;box-sizing:border-box}
-        body{
+        html, body{
             background:#030712;
             color:#fff;
             font-family:'Orbitron', 'Segoe UI', Arial, sans-serif;
             text-align:center;
-            padding:50px 20px;
             min-height:100vh;
-            overflow:hidden;
             position:relative;
         }
+        body{padding:50px 20px;}
         
         /* FONDO CIRCUITOS + ONDAS */
         body::before{
             content:'';
-            position:absolute;
+            position:fixed;
             top:0;left:0;width:100%;height:100%;
             background-image: 
                 linear-gradient(rgba(139,92,246,0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px);
             background-size: 50px 50px;
             z-index:0;
+            pointer-events:none;
         }
         .bg-waves{
-            position:absolute;
+            position:fixed;
             top:0;left:0;width:100%;height:100%;
             z-index:0;
             opacity:0.4;
+            pointer-events:none;
         }
         .wave{
             position:absolute;
             border:1px solid;
-            border-image: linear-gradient(
+            border-image: linear-gradient(45deg, #8B5CF6, #3B82F6) 1;
+            border-radius:50%;
+            animation:float 20s infinite linear;
+        }
+        .wave:nth-child(1){width:600px;height:600px;top:-200px;left:-200px;animation-duration:25s}
+        .wave:nth-child(2){width:800px;height:800px;bottom:-300px;right:-300px;animation-duration:30s;animation-delay:2s}
+        
+        @keyframes float{
+            0%{transform:scale(0.8) rotate(0deg);opacity:0.1}
+            50%{opacity:0.5}
+            100%{transform:scale(1.2) rotate(360deg);opacity:0.1}
+        }
+
+        .content{position:relative;z-index:2} /* z-index mas alto */
+        
+        h1{
+            font-size:52px;
+            font-weight:900;
+            letter-spacing:3px;
+            margin-bottom:10px;
+            background: linear-gradient(90deg, #A855F7 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .tag{color:#60A5FA;margin-bottom:30px;font-size:14px;font-weight:500;letter-spacing:1px;}
+        p{font-size:18px;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.6;color:#CBD5E1;font-weight:500;}
+        
+        .btn{
+            display:inline-block;
+            margin:8px;
+            padding:14px 28px;
+            background: linear-gradient(90deg, #8B5CF6 0%, #3B82F6 100%);
+            color:#fff;
+            text-decoration:none;
+            border-radius:10px;
+            font-weight:700;
+            transition:all 0.3s;
+            letter-spacing:1px;
+            position:relative;
+            z-index:3;
+        }
+        .
