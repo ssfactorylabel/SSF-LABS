@@ -23,4 +23,20 @@
         body::before{
             content:'';
             position:absolute;
-            top
+            top:0;left:0;width:100%;height:100%;
+            background-image: 
+                linear-gradient(rgba(139,92,246,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59,130,246,0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index:0;
+        }
+        .bg-waves{
+            position:absolute;
+            top:0;left:0;width:100%;height:100%;
+            z-index:0;
+            opacity:0.4;
+        }
+        .wave{
+            position:absolute;
+            border:1px solid;
+            border-image: linear-gradient(
