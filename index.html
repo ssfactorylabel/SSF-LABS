@@ -7,14 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
     *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
         background:#0a0a0f;
         color:#fff;
         font-family:'Roboto',sans-serif;
-        min-height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:center;
         background-image: 
             linear-gradient(rgba(139,92,246,0.05) 1px, transparent 1px),
             linear-gradient(90deg, rgba(139,92,246,0.05) 1px, transparent 1px);
@@ -23,19 +20,16 @@
     .container{
         text-align:center;
         padding:40px 20px;
-        max-width:700px;
+        max-width:800px;
         width:100%;
+        margin:0 auto;
     }
     
-    /* LOGO COMPLETO - SIN RECORTAR */
     .logo-container{
         width:100%;
         max-width:300px;
         margin:0 auto 30px;
         padding:20px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
     }
     .logo{
         width:100%;
@@ -45,11 +39,7 @@
         filter: drop-shadow(0 0 30px rgba(139,92,246,0.4));
         animation: float 3s ease-in-out infinite;
     }
-    
-    @keyframes float{
-        0%,100%{transform:translateY(0)}
-        50%{transform:translateY(-10px)}
-    }
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
     
     h1{
         font-family:'Orbitron',sans-serif;
@@ -77,7 +67,6 @@
         margin-bottom:20px;
     }
     
-    /* NUEVO: BADGE DEL REPO */
     .repo-badge{
         background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(96,165,250,0.2));
         border:1px solid rgba(139,92,246,0.4);
@@ -93,18 +82,53 @@
         margin-bottom:10px;
         letter-spacing:1px;
     }
-    .repo-badge p{
-        font-size:0.95rem;
-        color:#aaa;
+    .repo-badge p{font-size:0.95rem;color:#aaa;margin-bottom:15px;}
+    
+    .section{
+        margin:60px 0;
+        padding:40px 20px;
+        border-top:1px solid rgba(139,92,246,0.3);
+    }
+    .section h2{
+        font-family:'Orbitron',sans-serif;
+        font-size:2rem;
+        background:linear-gradient(135deg,#8B5CF6,#60A5FA);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        margin-bottom:20px;
+    }
+    .section h3{
+        font-family:'Orbitron',sans-serif;
+        color:#60A5FA;
+        font-size:1.3rem;
         margin-bottom:15px;
     }
+    .section p{color:#bbb;max-width:600px;margin:0 auto 25px;line-height:1.7;}
     
-    .buttons{
-        display:flex;
-        flex-direction:column;
-        gap:15px;
-        align-items:center;
+    /* COMING SOON */
+    .coming-soon{
+        background:linear-gradient(135deg,rgba(96,165,250,0.1),rgba(139,92,246,0.1));
+        border:2px dashed rgba(139,92,246,0.4);
+        border-radius:20px;
+        padding:40px 20px;
+        animation: pulse 2s ease-in-out infinite;
     }
+    @keyframes pulse{
+        0%,100%{box-shadow:0 0 20px rgba(139,92,246,0.2)}
+        50%{box-shadow:0 0 40px rgba(139,92,246,0.4)}
+    }
+    
+    .video-wrapper{
+        max-width:500px;
+        margin:0 auto 20px;
+        border-radius:20px;
+        overflow:hidden;
+        box-shadow:0 0 40px rgba(139,92,246,0.4);
+        border:2px solid rgba(139,92,246,0.3);
+    }
+    .video-wrapper video{width:100%;display:block;}
+    
+    .buttons{display:flex;flex-direction:column;gap:15px;align-items:center;margin-bottom:20px;}
     .btn{
         display:inline-block;
         padding:16px 40px;
@@ -120,31 +144,17 @@
         font-family:'Orbitron',sans-serif;
         letter-spacing:1px;
     }
-    .btn:hover{
-        transform:translateY(-3px);
-        box-shadow:0 8px 30px rgba(139,92,246,0.5);
-    }
-    .btn-secondary{
-        background:transparent;
-        border:2px solid #8B5CF6;
-        box-shadow:none;
-    }
-    .btn-secondary:hover{
-        background:rgba(139,92,246,0.1);
-        box-shadow:0 0 20px rgba(139,92,246,0.3);
-    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(139,92,246,0.5);}
+    .btn-secondary{background:transparent;border:2px solid #8B5CF6;box-shadow:none;}
+    .btn-secondary:hover{background:rgba(139,92,246,0.1);box-shadow:0 0 20px rgba(139,92,246,0.3);}
     
-    footer{
-        margin-top:50px;
-        color:#666;
-        font-size:13px;
-        font-family:'Orbitron',sans-serif;
-    }
+    footer{margin-top:50px;padding:30px 0;color:#666;font-size:13px;font-family:'Orbitron',sans-serif;border-top:1px solid rgba(139,92,246,0.2);}
     
     @media(max-width:768px){
         h1{font-size:2.8rem}
         .logo-container{max-width:240px}
         .btn{min-width:240px}
+        .section h2{font-size:1.6rem}
     }
 </style>
 </head>
@@ -163,7 +173,7 @@
         Forjando herramientas tecnológicas para impulsar el talento humano.
     </p>
 
-    <!-- NUEVO REPO DESTACADO -->
+    <!-- REPO DESTACADO -->
     <div class="repo-badge">
         <h2>IA PARA TODOS v1.0</h2>
         <p>Filosofía y Técnica para Usar IA con Honestidad, Creatividad y Sin Filtros</p>
@@ -173,7 +183,30 @@
     <div class="buttons">
         <a href="https://github.com/ssfactorylabel/ia-para-todos" target="_blank" class="btn">VER REPO EN GITHUB</a>
         <a href="https://doi.org/10.5281/zenodo.22036129" target="_blank" class="btn btn-secondary">CITAR PAPER DOI</a>
-        <a href="https://github.com/ssfactorylabel" target="_blank" class="btn btn-secondary">MÁS PROYECTOS</a>
+    </div>
+
+    <!-- SECCIÓN 1: MAS PROYECTOS - SPECIAL AI -->
+    <div class="section">
+        <h2>MÁS PROYECTOS</h2>
+        <h3>SPECIAL AI</h3>
+        <p>La evolución de nuestra androide. Un proyecto de personaje IA con identidad propia.</p>
+        
+        <div class="video-wrapper">
+            <video src="An98pk_mQpwwPpNHyrzMdQGscXOJa8R-A4VvkYXhJmC-bA8ZwlwH0m61IJ-BSVF1Dmkoo-0Pk6UY8CsRatF2uD1K8oCKV6fyU_lYR0xJqVxNLWppEP74g_p2.mp4" controls autoplay muted loop playsinline></video>
+        </div>
+        
+        <a href="https://instagram.com/ssfactorylabel" target="_blank" class="btn btn-secondary">@SSFACTORYLABEL EN IG</a>
+    </div>
+
+    <!-- SECCIÓN 2: PRÓXIMAMENTE -->
+    <div class="section">
+        <div class="coming-soon">
+            <h2>PRÓXIMAMENTE</h2>
+            <h3>DESARROLLO DE HERRAMIENTAS PERSONALIZADAS DE AI</h3>
+            <p>Estamos construyendo agentes, automatizaciones y sistemas a medida para creadores y negocios.</p>
+            <p><strong>¿Quieres ser beta tester?</strong> Escríbenos 👇</p>
+            <a href="https://instagram.com/ssfactorylabel" target="_blank" class="btn">CONTÁCTANOS</a>
+        </div>
     </div>
 
     <footer>
