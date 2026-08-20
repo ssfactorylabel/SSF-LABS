@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SSF LABS</title>
+<title>SSF LABS | IA PARA TODOS v1.0</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
     *{margin:0;padding:0;box-sizing:border-box}
@@ -23,14 +23,14 @@
     .container{
         text-align:center;
         padding:40px 20px;
-        max-width:600px;
+        max-width:700px;
         width:100%;
     }
     
     /* LOGO COMPLETO - SIN RECORTAR */
     .logo-container{
         width:100%;
-        max-width:300px; /* Más grande */
+        max-width:300px;
         margin:0 auto 30px;
         padding:20px;
         display:flex;
@@ -40,7 +40,7 @@
     .logo{
         width:100%;
         height:auto;
-        object-fit: contain; /* NO RECORTA */
+        object-fit: contain;
         display:block;
         filter: drop-shadow(0 0 30px rgba(139,92,246,0.4));
         animation: float 3s ease-in-out infinite;
@@ -74,8 +74,31 @@
         font-size:1.1rem;
         color:#ccc;
         line-height:1.7;
-        margin-bottom:40px;
+        margin-bottom:20px;
     }
+    
+    /* NUEVO: BADGE DEL REPO */
+    .repo-badge{
+        background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(96,165,250,0.2));
+        border:1px solid rgba(139,92,246,0.4);
+        border-radius:16px;
+        padding:25px;
+        margin-bottom:35px;
+        box-shadow:0 0 30px rgba(139,92,246,0.2);
+    }
+    .repo-badge h2{
+        font-family:'Orbitron',sans-serif;
+        font-size:1.5rem;
+        color:#8B5CF6;
+        margin-bottom:10px;
+        letter-spacing:1px;
+    }
+    .repo-badge p{
+        font-size:0.95rem;
+        color:#aaa;
+        margin-bottom:15px;
+    }
+    
     .buttons{
         display:flex;
         flex-direction:column;
@@ -101,6 +124,16 @@
         transform:translateY(-3px);
         box-shadow:0 8px 30px rgba(139,92,246,0.5);
     }
+    .btn-secondary{
+        background:transparent;
+        border:2px solid #8B5CF6;
+        box-shadow:none;
+    }
+    .btn-secondary:hover{
+        background:rgba(139,92,246,0.1);
+        box-shadow:0 0 20px rgba(139,92,246,0.3);
+    }
+    
     footer{
         margin-top:50px;
         color:#666;
@@ -118,7 +151,7 @@
 <body>
 
 <div class="container">
-    <!-- LOGO - NOMBRE CORREGIDO -->
+    <!-- LOGO -->
     <div class="logo-container">
         <img src="BeautyPlus-BG-CHANGER-1783273738276.jpg.png" alt="SSF LABS Logo" class="logo">
     </div>
@@ -130,13 +163,21 @@
         Forjando herramientas tecnológicas para impulsar el talento humano.
     </p>
 
+    <!-- NUEVO REPO DESTACADO -->
+    <div class="repo-badge">
+        <h2>IA PARA TODOS v1.0</h2>
+        <p>Filosofía y Técnica para Usar IA con Honestidad, Creatividad y Sin Filtros</p>
+        <p><strong>Incluye:</strong> Paper con DOI • special_ai_prompts.py • 3 Diagramas</p>
+    </div>
+
     <div class="buttons">
-        <a href="https://github.com/ssfactorylabel" target="_blank" class="btn">GITHUB</a>
-        <a href="ssfactorylabel.html" class="btn">SSFACTORYLABEL</a>
+        <a href="https://github.com/ssfactorylabel/ia-para-todos" target="_blank" class="btn">VER REPO EN GITHUB</a>
+        <a href="https://doi.org/10.5281/zenodo.22036129" target="_blank" class="btn btn-secondary">CITAR PAPER DOI</a>
+        <a href="https://github.com/ssfactorylabel" target="_blank" class="btn btn-secondary">MÁS PROYECTOS</a>
     </div>
 
     <footer>
-        EVOLUCIÓN DE SPECIAL AI 👽
+        EL CEREBRO ES PARA AMPLIFICARLO, NO REEMPLAZARLO 👽
     </footer>
 </div>
 
